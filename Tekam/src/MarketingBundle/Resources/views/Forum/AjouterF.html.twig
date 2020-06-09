@@ -1,0 +1,94 @@
+{% extends"@Gestion/Dashboard/base2.html.twig" %}
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+{% form_theme form 'bootstrap_4_horizontal_layout.html.twig' %}
+
+{% block content %}
+    <script src="{{asset ('js/jquery.min.js')}}">
+        <script type="text/javascript">
+            $(function()
+                {
+                    s(#envoyer).click(function () {
+                        valid = true;
+                        if ($(#nom).val() == "")
+                        {
+                            $(#nom).next(".error-content").fadeIn().text("veuillez entrer le nom");
+                            $(#nom).css("border-color","#FF0000");
+                            valid = false;
+                        }
+                        return valid;
+                        if ($(#type).val() == "")
+                        {
+                            $(#type).next(".error-content").fadeIn().text("veuillez entrer le nom");
+                            $(#type).css("border-color","#FF0000");
+                            valid = false;
+                        }
+                        return valid;
+
+                    });
+
+                }
+            );
+
+    </script>
+    <div class="container">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Menu</h3>
+            </div>
+            <div class="panel-body">
+                <input id="autocomplete" placeholder="Enter your address" onFocus="geolocate()" type="text" class="form-control">
+                <br>
+                <div class="well">
+
+                    {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+
+                    {{ form_errors(form) }}
+
+
+                    <div class="form-group">
+
+                        {{ form_label(form.nomMenu, "nomMenu", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+                        {{ form_errors(form.nomMenu) }}
+
+
+
+                        <div class="col-sm-10">
+                            <div id="nom">
+                                {{ form_widget(form.nomMenu, {'attr': {'class': 'form-control'}}) }}
+                                <span class="error-content" style="color: red;display: inline;padding:0 0 0 30px;background: 10px center no-repeat;display: none;">erreur</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        {{ form_label(form.date, "date", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+                        {{ form_errors(form.date) }}
+                        <div class="col-sm-10">
+                            {{ form_widget(form.date, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        {{ form_label(form.type, "type", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+                        {{ form_errors(form.type) }}
+                        <div class="col-sm-10">
+                            {{ form_widget(form.type, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        {{ form_label(form.Photo, "Photo", {'label_attr': {'class': 'col-sm-2 control-label'}}) }}
+                        {{ form_errors(form.Photo) }}
+                        <div class="col-sm-10">
+                            {{ form_widget(form.Photo, {'attr': {'class': 'form-control'}}) }}
+                        </div>
+                    </div>
+
+
+                    <div id="envoyer">
+                        {{ form_rest(form) }}
+
+                        {{ form_end(form) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

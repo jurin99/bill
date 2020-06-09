@@ -1,0 +1,30 @@
+marketing_homepage:
+    path:     /
+    defaults: { _controller: MarketingBundle:Default:index }
+Ajout_Forum:
+    path:     /AjoutF
+    defaults: { _controller: MarketingBundle:Forum:Ajouter }
+Affichage_Forum:
+    path:     /AfficherF
+    defaults: { _controller: MarketingBundle:Forum:Afficher }
+suppression_Forum:
+    path:     /SupprimerF
+    defaults: { _controller: MarketingBundle:Forum:SupprimerR }
+modification_Forum:
+    path:     /modifierF/{id}
+    defaults: { _controller: MarketingBundle:Forum:ModifierR }
+Ajout_Promo:
+    path:     /AjoutP
+    defaults: { _controller: MarketingBundle:Promo:Ajouter }
+Affichage_Promo:
+    path:     /AfficherP
+    defaults: { _controller: MarketingBundle:Promo:Afficher }
+suppression_Promo:
+    path:     /SupprimerP
+    defaults: { _controller: MarketingBundle:Promo:SupprimerR }
+modification_Promo:
+    path:     /modifierP/{id}
+    defaults: { _controller: MarketingBundle:Promo:ModifierR }
+
+
+

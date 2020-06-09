@@ -1,0 +1,24 @@
+MarketingBundle\Entity\Forum:
+    type: entity
+    table: null
+    repositoryClass: MarketingBundle\Repository\ForumRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: 255
+        image:
+            type: string
+            length: 255
+        description:
+            type: string
+            length: 255
+        date:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

@@ -1,0 +1,21 @@
+<table border="2">
+    <h1>Liste des Etudiants</h1>
+    <tr>
+        <th>noms</th>
+        <th>Images</th>
+        <th>Descriptions</th>
+        <th>Dates</th>
+        <th>Supprimer</th>
+        <th>Modifier</th>
+    </tr>
+    {% for Forum in Forum %}
+        <tr>
+            <td>{{Forum.nom}}</td>
+            <td><img width="100" height="100" style="margin-left: 500px;" src="{{ app.request.scheme ~'://' ~ app.request.httpHost ~ asset('upload/Forum/' ~ Forum.image) }}" ></div></td>
+            <td>{{Forum.description}}</td>
+            <td>{% if Forum.date %}{{ Forum.date|date('Y-m-d') }}{% endif %}</td>
+            <td><a href="{{path('suppression_Forum',{'id':Forum.id}) }}"><button type="button" class="btn btn-danger">SUPPRIMER</button></a></td>
+            <td><a href="{{path('modification_Forum',{'id':Forum.id}) }}"><button type="button" class="btn btn-primary">MODIFIER</button></a></td>
+        </tr>
+    {% endfor %}
+</table>

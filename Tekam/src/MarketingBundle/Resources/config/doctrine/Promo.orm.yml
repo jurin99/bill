@@ -1,0 +1,27 @@
+MarketingBundle\Entity\Promo:
+    type: entity
+    table: null
+    repositoryClass: MarketingBundle\Repository\PromoRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: 255
+        image:
+            type: string
+            length: 255
+        prix:
+            type: string
+            length: 255
+        description:
+            type: string
+            length: 255
+        date:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

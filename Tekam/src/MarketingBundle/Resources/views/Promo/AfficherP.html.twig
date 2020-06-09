@@ -1,0 +1,57 @@
+{% extends"base2.html.twig" %}
+{% block content %}
+
+
+    <div class="container">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h1 class="panel-title">Liste des menus</h1>
+            </div>
+            <div class="panel-body">
+                <input id="autocomplete" placeholder="Enter your address" onFocus="geolocate()" type="text" class="form-control">
+                <br>
+                <table class="table">
+                    <thead class="thead-light">
+
+                    <a href="{{path('Ajout_Promo')}}"><button type="button" class="btn btn-primary">Nouveau</button></a>
+
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">NOM</th>
+                        <th scope="col">IMAGE</th>
+                        <th scope="col">PRIX</th>
+                        <th scope="col">DESCRIPTION</th>
+                        <th scope="col">DATE</th>
+                        <th scope="col">Supprimer</th>
+                        <th scope="col">Modifier</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for Promo in Promo %}
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>{{Promo.nom}}</td>
+                            <td><img width="100" height="100" style="margin-left: 500px;" src="{{ app.request.scheme ~'://' ~ app.request.httpHost ~ asset('upload/Forum/' ~ Promo.image) }}" ></td>
+                            <td>{{Promo.nom}}</td>
+                            <td>{{Promo.description}}</td>
+                            <td>{{ Promo.date }}</td>
+                            <td><a href="{{path('suppression_Promo',{'id':Promo.id}) }}"><button type="button" class="btn btn-danger">SUPPRIMER</button></a></td>
+                            <td><a href="{{path('modification_Promo',{'id':Promo.id}) }}"><button type="button" class="btn btn-primary">MODIFIER</button></a></td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+{% endblock %}
+
+
+
+
+

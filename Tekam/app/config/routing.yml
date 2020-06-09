@@ -1,0 +1,7 @@
+marketing:
+    resource: "@MarketingBundle/Resources/config/routing.yml"
+    prefix:   /Forum
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation

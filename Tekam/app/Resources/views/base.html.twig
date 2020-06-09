@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}marhba!{% endblock %}</title>
+    {% block stylesheets %}
+
+
+    {% endblock %}
+</head>
+<body>
+{% block header %}
+    <link href="{{  asset ('Front/css/bootstrap.css') }}" rel='stylesheet' >
+    <!-- jQuery (Bootstrap's JavaScript plugins) -->
+    <!-- Custom Theme files -->
+    <link href="{{  asset ('Front/css/style.css') }}" rel="stylesheet"   >
+    <!-- Custom Theme files -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Bike-shop Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    <!--webfont-->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400' rel='stylesheet' type='text/css'>
+    <!--webfont-->
+    <!-- dropdown -->
+    <link href="{{  asset ('Front/css/nav.css') }}" rel="stylesheet"  >
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    <script src="{{  asset('Front/js/jquery.min.js')}}"></script>
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <script src="{{  asset('Front/js/scripts.html') }}" type="text/javascript"></script>
+    <!--js-->
+    <!---- start-smoth-scrolling---->
+    <script type="text/javascript" src="{{  asset('Front/js/move-top.js') }}"></script>
+    <script type="text/javascript" src="{{  asset('Front/js/easing.js') }}"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event){
+                event.preventDefault();
+                $('html,body').animate({scrollTop:$(this.hash).offset().top},900);
+            });
+        });
+    </script>
+    <script src="{{  asset('Front/js/jquery.easydropdown.js') }}"></script>
+
+    <div class="banner-bg banner-sec">
+        <div class="container">
+            <div class="header">
+                <div class="logo">
+                <div class="logo">
+                    <a href="{{ path('home') }}"><img src="{{  asset('Front/images/logo-bascla.png')}}" style="margin-left: 100px;" alt=""/></a>
+                </div>
+                <div class="top-nav">
+                    <label class="mobile_menu" for="mobile_menu">
+                        <span>Menu</span>
+                    </label>
+                    <input id="mobile_menu" type="checkbox">
+                    <ul class="nav">
+                        <li class="dropdown1" style="color: #1B242F;"><a href="{{ path('products') }}" >Products</a>
+                            <ul class="dropdown2">
+                                <li><a href="bicycles.html">Buy a bike</a></li>
+                                <li><a href="bicycles.html">Rent a bike</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown1"><a href="404.html">Events</a>
+                            <ul class="dropdown2">
+                                <li><a href="404.html">Competitions</a></li>
+                                <li><a href="404.html">Touristic Tours</a></li>
+                                <li><a href="404.html">Weekly Challenge</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown1"><a href="parts.html">After-Sales</a>
+                            <ul class="dropdown2">
+                                <li><a href="parts.html">Repare your bikes</a></li>
+                                <li><a href="parts.html"></a></li>
+                                <li><a href="parts.html">TIRES</a></li>
+                                <li><a href="parts.html">DISC BREAKS</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown1"><a href="parts.html">Partenariat</a>
+
+                        </li>
+                        <li class="dropdown1"><a href="parts.html">Charity</a>
+
+                        </li>
+                        <li class="dropdown1"><a href="accessories.html">Formations</a>
+
+                        </li>
+
+                        <a class="shop" href="cart.html"><img style="width: 150%;" src="{{asset('Front/images/cart.png')  }}" alt=""/></a>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+{% endblock %}
+{% block content %}
+    bjnk,
+{% endblock %}
+{% block footer %}
+    <div class="footer">
+        <div class="container wrap">
+            <div class="logo2">
+                <a href="index.html"><img src="images/logo2.png" alt=""/></a>
+            </div>
+            <div class="ftr-menu">
+
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!---->
+    <div class="footer-bottom">
+        <div class="container">
+            <p> &copy; 2020 Bascla. All Rights Reserved | Design by  <a href="http://w3layouts.com/"> IT Vision</a></p>
+
+        </div>
+    </div>
+{% endblock %}
+{% block javascripts %}
+
+
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,4 @@
+services:
+#    marketing.example:
+#        class: MarketingBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

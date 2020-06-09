@@ -1,0 +1,298 @@
+
+<body>
+
+<!-------------Pour appeler nimporte quel fichier css js ou image il faut que ça se trouve en 1 er sous
+web et sous le dossier correspondant ensuite faut utiliser cet expression pour les appeler
+{{ asset('(mithel)images/img.png') }}----->
+<!------vous trouverez sous le bundle Resources view des twigs faites un copier coller au contenu dans le nv twig
+ et saisissez la route dans routing comme
+ les  exemples et dans default controller le routing  ensuite faites un push master --->
+
+  
+
+<!--   catalogue equipement--------------------------------------------------------------------------------------------------------------->
+               <div class="bike-apparels">
+           <div class="parts1">
+             <a href="single.html"><div class="part-sec">          
+               <img src="images/p1.jpg" alt=""/>
+               <div class="part-info">
+                 <a href="#"><h5>Wire Locks<span>$7.00</span></h5></a>
+                 <a class="add-cart" href="single.html">Quick View</a>
+                 <a class="qck" href="single.html">BUY NOW</a>
+               </div>
+             </div></a>
+ <!--bouton------------------------------------------------------------------>
+            <a class="morebtn" href="bicycles.html">SHOP BIKES</a>
+
+
+
+
+
+<!--//details-product------------------------------------------------------------------------------------------------------------------------->
+
+
+            <div class="product">
+   <div class="container">
+     <div class="ctnt-bar cntnt">
+       <div class="content-bar">
+         <div class="single-page">
+           <div class="product-head">
+            <a href="index.html">Home</a> <span>::</span> 
+            </div>
+           <!--Include the Etalage files-->
+            <link rel="stylesheet" href="css/etalage.css">
+            <script src="js/jquery.etalage.min.js"></script>
+        <script>
+      jQuery(document).ready(function($){
+
+        $('#etalage').etalage({
+          thumb_image_width: 400,
+          thumb_image_height: 400,
+          source_image_width: 800,
+          source_image_height: 1000,
+          show_hint: true,
+          click_callback: function(image_anchor, instance_id){
+            alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
+          }
+        });
+
+      });
+    </script>
+
+           <div class="details-left-slider">
+             <div class="grid images_3_of_2">
+              <ul id="etalage">
+              <li>
+                <a href="optionallink.html">
+                  <img class="etalage_thumb_image" src="images/m1.jpg" class="img-responsive" />
+                  <img class="etalage_source_image" src="images/m1.jpg" class="img-responsive" title="" />
+                </a>
+              </li>
+              <li>
+                <img class="etalage_thumb_image" src="images/m2.jpg" class="img-responsive" />
+                <img class="etalage_source_image" src="images/m2.jpg" class="img-responsive" title="" />
+              </li>
+              <li>
+                <img class="etalage_thumb_image" src="images/m3.jpg" class="img-responsive"  />
+                <img class="etalage_source_image" src="images/m3.jpg"class="img-responsive"  />
+              </li>
+                <li>
+                <img class="etalage_thumb_image" src="images/m4.jpg" class="img-responsive"  />
+                <img class="etalage_source_image" src="images/m4.jpg"class="img-responsive"  />
+              </li>
+            </ul>
+            </div>
+           </div>
+           <div class="details-left-info">
+              <h3>SCOTT SPARK</h3>
+                <h4>Model No: 3498</h4>
+              <h4></h4>
+              <p><label>$</label> 300 <a href="#">Click for offer</a></p>
+              <p class="size">SIZE ::</p>
+              <a class="length" href="#">XS</a>
+              <a class="length" href="#">M</a>
+              <a class="length" href="#">S</a>
+              <div class="btn_form">
+                <a href="cart.html">buy now</a>
+                <a href="cart.html">ADD TO CART</a>
+              </div>
+              <div class="bike-type">
+              <p>TYPE  ::<a href="#">MOUNTAIN BIKE</a></p>
+              <p>BRAND  ::<a href="#">SPORTS SCOTTY</a></p>
+              </div>
+              <h5>Description  ::</h5>
+              <p class="desc">The first mechanically-propelled, two-wheeled vehicle may have been built by Kirkpatrick MacMillan, a Scottish blacksmith, in 1839, although the claim is often disputed. He is also associated with the first recorded instance of a cycling traffic offense, when a Glasgow newspaper in 1842 reported an accident in which an anonymous "gentleman from Dumfries-shire... bestride a velocipede... of ingenious design" knocked over a little girl in Glasgow and was fined five
+              The word bicycle first appeared in English print in The Daily News in 1868, to describe "Bysicles and trysicles" on the "Champs Elysées and Bois de Boulogne.</p>
+           </div>
+           <div class="clearfix"></div>         
+          </div>
+        </div>
+      </div>
+      
+       
+   </div>
+</div>
+
+
+
+
+<!--//panier----------------------------------------------------------------------------------------------------------------------------------->
+
+
+<div class="col-md-9 cart-items">
+       <h2>My Shopping Bag (2)</h2>
+        <script>$(document).ready(function(c) {
+          $('.close1').on('click', function(c){
+            $('.cart-header').fadeOut('slow', function(c){
+              $('.cart-header').remove();
+            });
+            });   
+          });
+         </script>
+       <div class="cart-header">
+         <div class="close1"> </div>
+         <div class="cart-sec">
+            <div class="cart-item cyc">
+               <img src="images/bik6.jpg"/>
+            </div>
+             <div class="cart-item-info">
+               <h3>MOUNTAIN HOPPER(XS R034)<span>Model No: 3578</span></h3>
+               <h4><span>Rs. $ </span>5800.00</h4>
+               <p class="qty">Qty ::</p>
+               <input min="1" type="number" id="quantity" name="quantity" value="1" class="form-control input-small">
+             </div>
+             <div class="clearfix"></div>
+            <div class="delivery">
+               <p>Service Charges:: Rs.100.00</p>
+               <span>Delivered in 2-3 bussiness days</span>
+               <div class="clearfix"></div>
+                </div>            
+          </div>
+       </div>
+       <script>$(document).ready(function(c) {
+          $('.close2').on('click', function(c){
+              $('.cart-header2').fadeOut('slow', function(c){
+            $('.cart-header2').remove();
+          });
+          });   
+          });
+       </script>
+       <div class="cart-header2">
+         <div class="close2"> </div>
+          <div class="cart-sec">
+            <div class="cart-item">
+               <img src="images/a3.png"/>
+            </div>
+             <div class="cart-item-info">
+               <h3>RIDE HELMET<span>Model No: 8768</span></h3>
+               <h4><span>Rs. $ </span>200.00</h4>
+               <p class="qty">Qty ::</p>
+               <input min="1" type="number" id="quantity" name="quantity" value="1" class="form-control input-small">
+             </div>
+             <div class="clearfix"></div>
+            <div class="delivery">
+               <p>Service Charges:: Rs.100.00</p>
+               <span>Delivered in 2-3 bussiness days</span>
+               <div class="clearfix"></div>
+                </div>            
+          </div>
+        </div>    
+     </div>
+
+<div class="col-md-3 cart-total">
+       <a class="continue" href="#">Continue to basket</a>
+       <div class="price-details">
+         <h3>Price Details</h3>
+         <span>Total</span>
+         <span class="total">6200.00</span>
+         <span>Discount</span>
+         <span class="total">---</span>
+         <span>Delivery Charges</span>
+         <span class="total">150.00</span>
+         <div class="clearfix"></div>        
+       </div> 
+       <h4 class="last-price">TOTAL</h4>
+       <span class="total final">6350.00</span>
+       <div class="clearfix"></div>
+       <a class="order" href="#">Place Order</a>
+       <div class="total-item">
+         <h3>OPTIONS</h3>
+         <h4>COUPONS</h4>
+         <a class="cpns" href="#">Apply Coupons</a>
+         <p><a href="#">Log In</a> to use accounts - linked coupons</p>
+       </div>
+      </div>
+
+
+<!--//Formulaire----------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+<div class="contact">
+  <div class="container">
+    <h3>CONTACT US</h3>
+    <p>Please contact us for all inquiries and purchase options.</p>
+    <form>
+       <input type="text" placeholder="NAME" required="">
+       <input type="text" placeholder="SURNAME" required="">       
+       <input class="user" type="text" placeholder="USER@DOMAIN.COM" required=""><br>
+       <textarea placeholder="MESSAGE"></textarea>
+       <input type="submit" value="SEND">
+    </form>
+  </div>
+</div>
+
+<!--//catalogue bike--------------------------------------------------------------------------------------------------------------->
+
+ <div class="mountain-sec">
+     <h2>MOUNTAIN BIKES</h2>
+     <a href="single.html"><div class="bike">        
+       <img src="images/bik3.jpg" alt=""/>
+         <div class="bike-cost">
+           <div class="bike-mdl">
+             <h4>NAME<span>Model:M4585</span></h4>
+           </div>
+           <div class="bike-cart">             
+             <a class="buy" href="single.html">BUY NOW</a>
+           </div>
+           <div class="clearfix"></div>
+         </div>
+         <div class="fast-viw">
+            <a href="single.html">Quick View</a>
+         </div>
+       </div></a>
+       <a href="single.html"><div class="bike">        
+         <img src="images/bik1.jpg" alt=""/>
+         <div class="bike-cost">
+           <div class="bike-mdl">
+             <h4>NAME<span>Model:M4585</span></h4>
+           </div>
+           <div class="bike-cart">             
+             <a class="buy" href="single.html">BUY NOW</a>
+           </div>
+           <div class="clearfix"></div>
+         </div>
+         <div class="fast-viw">
+            <a href="single.html">Quick View</a>
+         </div>
+       </div></a>
+       <a href="single.html"><div class="bike none2">        
+         <img src="images/bik4.jpg" alt=""/>
+         <div class="bike-cost">
+           <div class="bike-mdl">
+             <h4>NAME<span>Model:M4585</span></h4>
+           </div>
+           <div class="bike-cart">             
+             <a class="buy" href="single.html">BUY NOW</a>
+           </div>
+           <div class="clearfix"></div>
+         </div>
+         <div class="fast-viw">
+            <a href="single.html">Quick View</a>
+         </div>
+       </div></a>
+       <a href="single.html"><div class="bike none1">        
+         <img src="images/bik6.jpg" alt=""/>
+         <div class="bike-cost">
+           <div class="bike-mdl">
+             <h4>NAME<span>Model:M4585</span></h4>
+           </div>
+           <div class="bike-cart">             
+             <a class="buy" href="single.html">BUY NOW</a>
+           </div>
+           <div class="clearfix"></div>
+         </div>
+         <div class="fast-viw">
+            <a href="single.html">Quick View</a>
+         </div>
+       </div></a>
+       <div class="clearfix"></div>
+    </div>
+     
+
+
+
+
+</body>
+</html>
+
